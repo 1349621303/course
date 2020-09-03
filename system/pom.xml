@@ -40,6 +40,14 @@
 
 
 
+
+        <dependency>
+            <groupId>com.course</groupId>
+            <artifactId>server</artifactId>
+        </dependency>
+
+
+
     </dependencies>
 
 
