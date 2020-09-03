@@ -6,12 +6,17 @@
 <generatorConfiguration>
     <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
 
-        <property name="autoDelimitKeywords" value="true"/>
+<!--        <property name="autoDelimitKeywords" value="true"/>-->
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
+
+
         <!--覆盖生成XML文件-->
         <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
+
+
+
         <!-- 生成的实体类添加toString()方法 -->
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
 
@@ -27,15 +32,15 @@
         </jdbcConnection>
 
         <!-- domain类的位置 -->
-        <javaModelGenerator targetProject="src\main\java"
+        <javaModelGenerator targetProject="src/main/java"
                             targetPackage="com.course.server.domain"/>
 
         <!-- mapper xml的位置 -->
-        <sqlMapGenerator targetProject="src\main\resources"
+        <sqlMapGenerator targetProject="src/main/resources"
                          targetPackage="mapper"/>
 
         <!-- mapper类的位置 -->
-        <javaClientGenerator targetProject="src\main\java"
+        <javaClientGenerator targetProject="src/main/java"
                              targetPackage="com.course.server.mapper"
                              type="XMLMAPPER" />
 
